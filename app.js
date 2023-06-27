@@ -5,6 +5,7 @@ const answers = [
     "和風オムライス",
     "うどん"
 ];
+
 const correct = "和風オムライス";
 console.log();
 document.getElementById("js-question").textContent = question;
