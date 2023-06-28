@@ -30,9 +30,7 @@ const quiz=[
 ]
 const quizLength = quiz.length;
 let quizIndex = 0;
-while(quizIndex < quizLength){
-    quizIndex++;
-}
+let correctIndex=0;
 
 const $button = document.getElementsByTagName("button");
 let buttonLength = $button.length;
@@ -50,6 +48,7 @@ setupQuiz();
 const clickHandler = (e) => {
     if(quiz[quizIndex].correct === e.target.textContent){
         window.alert("正解!");
+        correctIndex++;
     }else{
         window.alert("不正解!");
     }
@@ -57,7 +56,20 @@ const clickHandler = (e) => {
     if(quizIndex < quizLength){
         setupQuiz();
     }else{
-        window.alert("終わり!");
+        switch(correctIndex){
+            case 0:
+                window.alert("お前は何も理解していない");
+                break;
+            case 1:
+                window.alert("甘い");
+                break;
+            case 2:
+                window.alert("やるやん");
+                break;
+            case 3:
+                window.alert("Congratulation!")
+                break;
+        }
     }
 }
 let handlerIndex=0;
