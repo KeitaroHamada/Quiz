@@ -50,7 +50,7 @@ const clickHandler = (e) => {
         window.alert("正解!");
         correctIndex++;
     }else{
-        window.alert("不正解!");
+        window.alert("不正解! 正解は"+quiz[quizIndex].correct+"でした")
     }
     quizIndex++;
     if(quizIndex < quizLength){
@@ -58,16 +58,16 @@ const clickHandler = (e) => {
     }else{
         switch(correctIndex){
             case 0:
-                window.alert("お前は何も理解していない");
+                window.alert("正解数"+correctIndex+"問 お前は何も理解していない");
                 break;
             case 1:
-                window.alert("甘い");
+                window.alert("正解数"+correctIndex+"問 甘い");
                 break;
             case 2:
-                window.alert("やるやん");
+                window.alert("正解数"+correctIndex+"問 やるやん");
                 break;
             case 3:
-                window.alert("Congratulation!")
+                window.alert("正解数"+correctIndex+"問 Congratulation!")
                 break;
         }
     }
